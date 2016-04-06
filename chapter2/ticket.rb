@@ -25,3 +25,14 @@ def ticket.price
 end
 
 puts "This ticket is for: #{ticket.event} at #{ticket.venue} on #{ticket.date}.\nThe peformer is #{ticket.performer}.\nThe seat is #{ticket.seat}, and it costs $#{"%.2f"%ticket.price}."
+
+puts "What do you want to know? date, venue, event, performer, seat, or price?"
+request = gets.chomp!
+
+if ticket.respond_to?(request)
+  puts ticket.send(request)
+else
+  puts "Not available."
+end
+
+puts "Thanks!"
