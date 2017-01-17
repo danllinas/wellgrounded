@@ -55,14 +55,14 @@
 #
 # puts "Publisher: #{pub.publisher}.", "Magazine Publisher: #{mag.publisher}.", "Mag editor: #{mag.editor}."
 
-class Person
-  def species
-    "Homo sapiens"
-  end
-end
-
-class Rubyist < Person
-end
-
-danny = Rubyist.new
-puts danny.species
+# class Person
+#   def species
+#     "Homo sapiens"
+#   end
+# end
+#
+# class Rubyist < Person
+# end
+#
+# danny = Rubyist.new
+# puts danny.species
