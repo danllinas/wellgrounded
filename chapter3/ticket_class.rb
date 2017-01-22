@@ -1,12 +1,13 @@
-# class Ticket
-#   attr_reader :venue, :date
-#   attr_accessor :price
-#
-#   def initialize(venue, date)
-#     @venue = venue
-#     @date = date
-#   end
-# end
+class Ticket
+  attr_reader :venue, :date
+  attr_accessor :price
+
+  def initialize(venue, date)
+    @venue = venue
+    @date = date
+  end
+end
+
 #
 # th = Ticket.new("Town Hall", "11/12/13")
 # cc = Ticket.new("Convention Center", "12/13/14")
@@ -37,6 +38,8 @@
 # # dan = Person.new
 # # dan.set_name("Danny")
 # # dan.get_name
+
+
 
 
 # class Publication
