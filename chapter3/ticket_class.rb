@@ -6,14 +6,28 @@ class Ticket
     @venue = venue
     @date = date
   end
+
+  def most_expensive(*tickets)
+    tickets.max_by(&:price)
+  end
 end
 
-#
-# th = Ticket.new("Town Hall", "11/12/13")
-# cc = Ticket.new("Convention Center", "12/13/14")
-# th.price = 50.99
-# cc.price = 25
-#
+
+
+th = Ticket.new("Town Hall", "11/12/13")
+cc = Ticket.new("Convention Center", "12/13/14")
+fg = Ticket.new("Fairgrounds", "13/14/15")
+th.price = 5.99
+cc.price = 25
+fg.price = 18.00
+
+highest = th.most_expensive(th, cc, fg)
+
+puts "The highest priced ticet is the one for #{highest.venue}."
+
+puts highest.date
+
+
 # puts "We've created two tickets."
 # puts "The first is for a #{th.venue} on #{th.date} for $#{"%.2f" % th.price}."
 # puts "The second is for a #{cc.venue} on #{cc.date} for $#{"%.2f" % cc.price}."
