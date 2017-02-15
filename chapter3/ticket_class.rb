@@ -80,6 +80,7 @@ def mag.wings
 end
 
 mag.wings
+pub.wings
 
 #
 # pub.publisher = "Amazon"
